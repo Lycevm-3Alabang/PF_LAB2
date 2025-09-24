@@ -27,4 +27,4 @@ namespace ShoeShop.Repository.Entities
     }
 }
 
-// Stock Pull out set.
+// Stock Pull out set
