@@ -72,3 +72,5 @@ class Program
         }
     }
 }
+
+// test succeeded
