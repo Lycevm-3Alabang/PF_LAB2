@@ -131,3 +131,5 @@ namespace ShoeShop.Repository
         }
     }
 }
+
+//seed data code added
