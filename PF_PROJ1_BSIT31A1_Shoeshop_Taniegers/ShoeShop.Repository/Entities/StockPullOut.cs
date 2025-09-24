@@ -26,3 +26,5 @@ namespace ShoeShop.Repository.Entities
         Rejected
     }
 }
+
+// Stock Pull out set.
