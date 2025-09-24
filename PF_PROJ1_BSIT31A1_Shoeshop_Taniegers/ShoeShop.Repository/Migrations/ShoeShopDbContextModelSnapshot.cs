@@ -295,3 +295,5 @@ namespace ShoeShop.Repository.Migrations
         }
     }
 }
+
+// Properties and relationships have been set and configured
