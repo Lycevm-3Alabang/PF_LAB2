@@ -1,12 +1,13 @@
 /*
- * FINAL CUSTOM STYLING for Sole Leveling (Inspired by Sample)
+ * FINAL CUSTOM STYLING for Sole Leveling (HD Cover with Contrast Overlay)
  */
 
 html {
     position: relative;
     min-height: 100%;
-    /* Set the background on the HTML element for full cover */
-    background: url('https://i.imgur.com/2Yl0Z7o.jpeg') no-repeat center center fixed; /* Palitan ang URL na ito ng sarili mong high-res image */
+    /* Ibinabalik sa 'cover' para full-screen at walang borders */
+    background: url('https://i.pinimg.com/736x/09/fc/23/09fc23e06867abb98eed4d0a8fc56e30.jpg') no-repeat center center fixed;
+    /* Cover the screen */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,22 +15,17 @@ html {
 }
 
 body {
-    /* Make the body transparent so the background shows through */
-    background-color: transparent !important;
-    color: white; /* Default text color to contrast with dark background */
+    /* Ang background ng body ang magsisilbing dark overlay */
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black overlay */
+    color: white;
     margin-bottom: 60px;
-    padding-top: 0; /* Alisin ang default padding */
+    padding-top: 0;
 }
 
-/* Override Bootstrap container for center alignment on pages */
+/* Navigation, Footer, at iba pa ay mananatiling tama ang contrast */
+
 .container {
     padding-top: 50px;
-}
-
-/* Navigation and Footer Styles */
-header {
-    /* Add a slight opaque dark background to the header */
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .navbar-brand {
@@ -42,26 +38,27 @@ header {
     white-space: nowrap;
     line-height: 60px;
     font-size: 0.85em;
-    background-color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent dark footer */
+    background-color: rgba(0, 0, 0, 0.7) !important;
     color: #ccc !important;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-/* Custom Panel for Forms/Content */
+/* Custom Panel (Semi-transparent white panel) */
 .custom-panel {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    color: #333; /* Dark text color for readability on white panel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Mas malakas na shadow */
+    color: #333;
     max-width: 600px;
-    margin: auto; /* Center the panel */
+    margin: auto;
 }
 
 .display-4, h1, h2 {
-    color: white; /* Tiyakin na ang titles ay white sa labas ng panel */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-    font-weight: 700;
+    color: white;
+    /* Tiyakin na nagla-stand out ang text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
+    font-weight: 900; /* Mas matapang na font weight */
 }
