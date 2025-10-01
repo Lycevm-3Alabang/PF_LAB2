@@ -1,22 +1,67 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+/*
+ * FINAL CUSTOM STYLING for Sole Leveling (Inspired by Sample)
+ */
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    /* Set the background on the HTML element for full cover */
+    background: url('https://i.imgur.com/2Yl0Z7o.jpeg') no-repeat center center fixed; /* Palitan ang URL na ito ng sarili mong high-res image */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
-  margin-bottom: 60px;
+    /* Make the body transparent so the background shows through */
+    background-color: transparent !important;
+    color: white; /* Default text color to contrast with dark background */
+    margin-bottom: 60px;
+    padding-top: 0; /* Alisin ang default padding */
+}
+
+/* Override Bootstrap container for center alignment on pages */
+.container {
+    padding-top: 50px;
+}
+
+/* Navigation and Footer Styles */
+header {
+    /* Add a slight opaque dark background to the header */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-brand {
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+}
+
+.footer {
+    white-space: nowrap;
+    line-height: 60px;
+    font-size: 0.85em;
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Semi-transparent dark footer */
+    color: #ccc !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Custom Panel for Forms/Content */
+.custom-panel {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #333; /* Dark text color for readability on white panel */
+    max-width: 600px;
+    margin: auto; /* Center the panel */
+}
+
+.display-4, h1, h2 {
+    color: white; /* Tiyakin na ang titles ay white sa labas ng panel */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    font-weight: 700;
 }

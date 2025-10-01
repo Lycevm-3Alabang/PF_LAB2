@@ -163,3 +163,4 @@ C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_S
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.pdb
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ShoeShop_SOLOLEVELING.genruntimeconfig.cache
 C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\ref\ShoeShop_SOLOLEVELING.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop_SOLOLEVELING\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
