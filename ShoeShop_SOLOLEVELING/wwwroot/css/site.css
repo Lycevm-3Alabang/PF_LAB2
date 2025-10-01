@@ -1,11 +1,14 @@
 /*
- * FINAL CUSTOM STYLING for Sole Leveling (HD Cover with Contrast Overlay)
+ * FINAL CUSTOM STYLING for Sole Leveling
+ * - Full-screen cover background
+ * - Dark overlay on the entire page (body) for high contrast
+ * - Transparent header and footer (50% opacity) for seamless look
  */
 
 html {
     position: relative;
     min-height: 100%;
-    /* Ibinabalik sa 'cover' para full-screen at walang borders */
+    /* Full-screen cover ng image, naka-fixed sa gitna */
     background: url('https://i.pinimg.com/736x/09/fc/23/09fc23e06867abb98eed4d0a8fc56e30.jpg') no-repeat center center fixed;
     /* Cover the screen */
     -webkit-background-size: cover;
@@ -15,14 +18,31 @@ html {
 }
 
 body {
-    /* Ang background ng body ang magsisilbing dark overlay */
-    background-color: rgba(0, 0, 0, 0.5) !important; /* Semi-transparent black overlay */
-    color: white;
+    /* Ang background ng body ang magsisilbing dark overlay (50% opaque) */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: white; /* White text for contrast */
     margin-bottom: 60px;
     padding-top: 0;
 }
 
-/* Navigation, Footer, at iba pa ay mananatiling tama ang contrast */
+/* Navigation and Footer Styles */
+
+/* Header FIX: Ginawang 50% transparent */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Footer FIX: Ginawang 50% transparent */
+.footer {
+    white-space: nowrap;
+    line-height: 60px;
+    font-size: 0.85em;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: #ccc !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 .container {
     padding-top: 50px;
@@ -34,31 +54,20 @@ body {
     font-size: 1.5em;
 }
 
-.footer {
-    white-space: nowrap;
-    line-height: 60px;
-    font-size: 0.85em;
-    background-color: rgba(0, 0, 0, 0.7) !important;
-    color: #ccc !important;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Custom Panel (Semi-transparent white panel) */
 .custom-panel {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Halos puti */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Mas malakas na shadow */
-    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    color: #333; /* Dark text for readability on white background */
     max-width: 600px;
     margin: auto;
 }
 
 .display-4, h1, h2 {
     color: white;
-    /* Tiyakin na nagla-stand out ang text */
+    /* Bold text shadow para mag-stand out ang text sa background */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.0);
-    font-weight: 900; /* Mas matapang na font weight */
+    font-weight: 900;
 }
