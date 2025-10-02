@@ -1,6 +1,22 @@
+using Microsoft.EntityFrameworkCore;
+using ShoeShop.Data;
+using ShoeShop.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+string dbProvider = builder.Configuration["DatabaseProvider"] ?? "Sqlite";
+if (dbProvider == "SqlServer")
+{
+    builder.Services.AddDbContext<ShoeShopDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection")));
+}
+else
+{
+    builder.Services.AddDbContext<ShoeShopDbContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+}
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

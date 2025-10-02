@@ -1,0 +1,10 @@
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.csproj.AssemblyReference.cache
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.AssemblyInfoInputs.cache
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.AssemblyInfo.cs
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.csproj.CoreCompileInputs.cache
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.RazorAssemblyInfo.cache
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.RazorAssemblyInfo.cs
+C:\Users\sheng\source\repos\PF_PROJ1_BSIT31A1_ShoeShop_GithubLovers\ShoeShop\obj\Debug\net9.0\ShoeShop.sourcelink.json
