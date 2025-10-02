@@ -14,6 +14,7 @@ namespace ShoeShop.Repository.ConsoleApp
 
             using var context = new ShoeShopDbContext(options);
             context.Database.EnsureCreated();
+            SeedData.Seed(context);
 
             // CRUD: Add, Read, Update, Delete Shoes
             var shoe = new Shoe
@@ -42,6 +43,22 @@ namespace ShoeShop.Repository.ConsoleApp
             foreach (var s in shoesWithColors)
             {
                 Console.WriteLine($"Shoe: {s.Name}, Colors: {s.ColorVariations.Count}");
+            }
+
+            // Test update
+            var firstShoe = context.Shoes.FirstOrDefault();
+            if (firstShoe != null)
+            {
+                firstShoe.Description = "Updated description.";
+                context.SaveChanges();
+            }
+
+            // Test delete
+            var lastShoe = context.Shoes.OrderByDescending(s => s.Id).FirstOrDefault();
+            if (lastShoe != null)
+            {
+                context.Shoes.Remove(lastShoe);
+                context.SaveChanges();
             }
         }
     }

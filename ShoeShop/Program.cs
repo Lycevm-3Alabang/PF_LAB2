@@ -5,17 +5,8 @@ using ShoeShop.Entities;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-string dbProvider = builder.Configuration["DatabaseProvider"] ?? "Sqlite";
-if (dbProvider == "SqlServer")
-{
-    builder.Services.AddDbContext<ShoeShopDbContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServerConnection")));
-}
-else
-{
-    builder.Services.AddDbContext<ShoeShopDbContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
-}
+builder.Services.AddDbContext<ShoeShopDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 
 builder.Services.AddControllersWithViews();
 
@@ -25,21 +16,16 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseRouting();
-
 app.UseAuthorization();
-
 app.MapStaticAssets();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-
 
 app.Run();

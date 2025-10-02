@@ -27,6 +27,30 @@ namespace ShoeShop.Repository.ConsoleApp
                 }
                 context.Shoes.AddRange(shoes);
                 context.SaveChanges();
+
+                // Add color variations for each shoe
+                var colors = new[] { "Red", "Blue", "White", "Black", "Green" };
+                var hexCodes = new[] { "#FF0000", "#0000FF", "#FFFFFF", "#000000", "#00FF00" };
+                var colorVariations = new List<ShoeColorVariation>();
+                int cvId = 1;
+                foreach (var shoe in context.Shoes)
+                {
+                    for (int c = 0; c < colors.Length; c++)
+                    {
+                        colorVariations.Add(new ShoeColorVariation
+                        {
+                            ShoeId = shoe.Id,
+                            ColorName = colors[c],
+                            HexCode = hexCodes[c],
+                            StockQuantity = 10 + cvId % 7,
+                            ReorderLevel = 5,
+                            IsActive = true
+                        });
+                        cvId++;
+                    }
+                }
+                context.ShoeColorVariations.AddRange(colorVariations);
+                context.SaveChanges();
             }
 
             if (!context.Suppliers.Any())
@@ -41,7 +65,56 @@ namespace ShoeShop.Repository.ConsoleApp
                 context.SaveChanges();
             }
 
-            // Add sample color variations, purchase orders, and pull-outs as needed
+            if (!context.PurchaseOrders.Any())
+            {
+                var supplier = context.Suppliers.First();
+                var po = new PurchaseOrder
+                {
+                    OrderNumber = "PO-1001",
+                    SupplierId = supplier.Id,
+                    OrderDate = DateTime.Now.AddDays(-5),
+                    ExpectedDate = DateTime.Now.AddDays(2),
+                    Status = PurchaseOrderStatus.Pending,
+                    TotalAmount = 15000M
+                };
+                context.PurchaseOrders.Add(po);
+                context.SaveChanges();
+
+                // Add items to purchase order
+                var colorVar = context.ShoeColorVariations.Take(3).ToList();
+                var poItems = new List<PurchaseOrderItem>();
+                foreach (var cv in colorVar)
+                {
+                    poItems.Add(new PurchaseOrderItem
+                    {
+                        PurchaseOrderId = po.Id,
+                        ShoeColorVariationId = cv.Id,
+                        QuantityOrdered = 5,
+                        QuantityReceived = 0,
+                        UnitCost = 3500M
+                    });
+                }
+                context.PurchaseOrderItems.AddRange(poItems);
+                context.SaveChanges();
+            }
+
+            if (!context.StockPullOuts.Any())
+            {
+                var cv = context.ShoeColorVariations.First();
+                var pullOut = new StockPullOut
+                {
+                    ShoeColorVariationId = cv.Id,
+                    Quantity = 2,
+                    Reason = "Damaged",
+                    ReasonDetails = "Box damaged during delivery",
+                    RequestedBy = "admin",
+                    ApprovedBy = "manager",
+                    PullOutDate = DateTime.Now.AddDays(-1),
+                    Status = StockPullOutStatus.Approved
+                };
+                context.StockPullOuts.Add(pullOut);
+                context.SaveChanges();
+            }
         }
     }
 }
