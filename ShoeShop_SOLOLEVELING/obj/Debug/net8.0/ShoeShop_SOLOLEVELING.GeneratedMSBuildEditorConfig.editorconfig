@@ -1,19 +1,11 @@
 is_global = true
 build_property.TargetFramework = net8.0
-build_property.TargetFramework = net8.0
-build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
-build_property.UsingMicrosoftNETSdkWeb = true
-build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
-build_property.InvariantGlobalization = 
-build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property.EnforceExtendedAnalyzerRules = 
-build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ShoeShop_SOLOLEVELING
 build_property.RootNamespace = ShoeShop_SOLOLEVELING
@@ -34,6 +26,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Jhirz/source/repos/PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING/ShoeShop_SOLOLEVELING/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhirz/source/repos/PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING/ShoeShop_SOLOLEVELING/Views/Inventory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhirz/source/repos/PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING/ShoeShop_SOLOLEVELING/Views/Inventory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50b3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhirz/source/repos/PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING/ShoeShop_SOLOLEVELING/Views/Reports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Jhirz/source/repos/PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING/ShoeShop_SOLOLEVELING/Views/Reports/StockPullOutHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0c1xTdG9ja1B1bGxPdXRIaXN0b3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Jhirz/source/repos/PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING/ShoeShop_SOLOLEVELING/Views/Shared/Error.cshtml]

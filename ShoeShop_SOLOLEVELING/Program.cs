@@ -1,27 +1,39 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 using ShoeShop.Repository.Data;
-using Microsoft.Extensions.Configuration; // KINAKAILANGAN ITO PARA GUMANA ANG GetConnectionString
+using ShoeShop.Repository.Interfaces;
+using ShoeShop.Repository.Repositories;
+using ShoeShop.Services.Interfaces;
+using ShoeShop.Services.Mapping;
+using ShoeShop.Services.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// IDAGDAG ANG LINES NA ITO PARA I-REGISTER ANG DB CONTEXT
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
+        ?? "Server=localhost;Database=ShoeShopDb;Trusted_Connection=True;MultipleActiveResultSets=true")
+);
 
-builder.Services.AddDbContext<ShoeShopDbContext>(options =>
-{
-    options.UseSqlite(connectionString);
-});
-// TAPOS DITO
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddAutoMapper(typeof(ShoeShop.Services.Services.InventoryService));
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IShoeRepository, ShoeRepository>();
+builder.Services.AddScoped<IStockPullOutRepository, StockPullOutRepository>();
+
+
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+builder.Services.AddScoped<IPullOutService, PullOutService>();
+builder.Services.AddScoped<IPurchaseOrderService, PurchaseOrderService>();
+builder.Services.AddScoped<IReportService, ReportService>();
+
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

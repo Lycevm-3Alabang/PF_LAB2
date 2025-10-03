@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ShoeShop.Services.DTOs.StockPullOutDto>
+
+@{
+    ViewData["Title"] = "Stock Pull-Out Reports";
+}
+
+<div class="container mt-5">
+    <h1 class="text-primary mb-4">Stock Pull-Out Transaction History</h1>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info shadow-lg" role="alert">
+            <h4 class="alert-heading">No Data Found</h4>
+            <p>There are no recorded stock pull-out transactions in the database yet.</p>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered shadow-sm">
+                <thead class="bg-primary text-white" style="font-weight: bold;">
+                    <tr>
+                        <th>Variation ID</th>
+                        <th>Quantity</th>
+                        <th>Reason</th>
+                        <th>Requested By</th>
+                        <th>Pull Out Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody style="color: black;">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ShoeColorVariationId</td>
+                            <td>@item.Quantity</td>
+                            <td>@item.Reason</td>
+                            <td>@item.RequestedBy</td>
+                            <td>@item.PullOutDate.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>@item.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <p class="mt-4">
+        <a href="/" class="btn btn-secondary shadow-sm">Back to Home</a>
+    </p>
+</div>

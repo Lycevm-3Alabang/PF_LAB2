@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ShoeShop.Repository.Entities;
+
 
 namespace ShoeShop.Repository.Entities
 {
@@ -14,8 +16,6 @@ namespace ShoeShop.Repository.Entities
         public string ColorName { get; set; }
 
         [MaxLength(7)]
-        public string HexCode { get; set; }
-
         public int StockQuantity { get; set; }
 
         public int ReorderLevel { get; set; } = 5;

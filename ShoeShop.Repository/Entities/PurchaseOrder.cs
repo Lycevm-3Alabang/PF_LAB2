@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ShoeShop.Repository.Entities;
+
 
 namespace ShoeShop.Repository.Entities
 {

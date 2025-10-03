@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ShoeShop.Services.DTOs.StockPullOutDto>
+@{
+    ViewData["Title"] = "Stock Pull-Out Transaction History";
+}
+
+<style>
+    h1 {
+        color: #90EE90 !important; 
+        text-shadow: 2px 2px 4px black;
+        padding-bottom: 10px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        color: #90EE90 !important; 
+        font-weight: 500;
+    }
+
+    
+    .table-dark td,
+    .table-dark th {
+        color: #90EE90 !important;
+    }
+</style>
+
+<div class="container">
+
+    <h1>Stock Pull-Out Transaction History</h1>
+
+    <table class="table table-bordered table-dark">
+        <thead>
+            <tr>
+                <th>Variation ID</th>
+                <th>Quantity</th>
+                <th>Reason</th>
+                <th>Requested By</th>
+                <th>Pull Out Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ShoeColorVariationId</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Reason</td>
+                    <td>@item.RequestedBy</td>
+                    <td>@item.PullOutDate.ToString("MM/dd/yyyy HH:mm")</td>
+                    <td>@item.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+
+</div>
