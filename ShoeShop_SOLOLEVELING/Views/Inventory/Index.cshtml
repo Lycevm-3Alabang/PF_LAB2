@@ -1,0 +1,52 @@
+﻿@model List<ShoeShop.Services.DTOs.ShoeDto>
+
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+    <h1>Inventory</h1>
+
+    <a asp-action="Create" asp-controller="Inventory" class="btn btn-success">
+        <i class="fas fa-plus-circle"></i> Add New Shoe
+    </a>
+</div>
+@if (TempData["Message"] != null)
+{
+    <p style="color: lawngreen;">@TempData["Message"]</p>
+}
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shoe in Model)
+        {
+            <tr class="@(shoe.IsActive ? "" : "table-danger")">
+                <td>@shoe.Id</td>
+                <td>@shoe.ModelName</td>
+                <td>@shoe.Brand</td>
+                <td>@shoe.RetailPrice</td>
+                <td>@(shoe.ColorVariations?.Sum(v => v.StockQuantity) ?? 0)</td>
+                <td>@(shoe.IsActive ? "Active" : "Discontinued")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Adjust Stock</h3>
+<form asp-action="AdjustStock" method="post">
+    <label>Shoe ID:</label>
+    <input type="number" name="shoeId" required />
+    <label>Quantity:</label>
+    <input type="number" name="quantityChange" required />
+    <label>Reason:</label>
+    <input type="text" name="reason" required />
+    <label>User:</label>
+    <input type="text" name="user" required />
+    <button type="submit">Update Stock</button>
+</form>

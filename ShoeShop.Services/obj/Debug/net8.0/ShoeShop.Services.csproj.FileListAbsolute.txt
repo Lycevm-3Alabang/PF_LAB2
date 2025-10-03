@@ -1,0 +1,16 @@
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\bin\Debug\net8.0\ShoeShop.Services.deps.json
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\bin\Debug\net8.0\ShoeShop.Services.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\bin\Debug\net8.0\ShoeShop.Services.pdb
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\bin\Debug\net8.0\ShoeShop.Repository.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\bin\Debug\net8.0\ShoeShop.Repository.pdb
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.csproj.AssemblyReference.cache
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.AssemblyInfoInputs.cache
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.AssemblyInfo.cs
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.csproj.CoreCompileInputs.cache
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.sourcelink.json
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.8E47C9B0.Up2Date
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\refint\ShoeShop.Services.dll
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ShoeShop.Services.pdb
+C:\Users\Jhirz\source\repos\PF_PROJ1_BSIT31A-3-_ShoeShop_SOLOLEVELING\ShoeShop.Services\obj\Debug\net8.0\ref\ShoeShop.Services.dll
